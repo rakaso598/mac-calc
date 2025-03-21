@@ -5,13 +5,13 @@ function Header() {
   return (
     <Container>
       <li>
-        <Button />
+        <Button $color="red" />
       </li>
       <li>
-        <Button />
+        <Button $color="yellow" />
       </li>
       <li>
-        <Button />
+        <Button $color="gray" />
       </li>
     </Container>
   );
@@ -27,7 +27,7 @@ const Container = styled.ul`
 
 const Button = styled.button`
   all: unset;
-  background-color: red;
+  background-color: ${(props) => props.$color};
   width: 12px;
   height: 12px;
   border-radius: 100%;
